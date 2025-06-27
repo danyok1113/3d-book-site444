@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Учебные материалы</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background: #005f73;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #94d2bd;
+    }
+    main {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 40px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+    .text-section {
+      flex: 1;
+      background: #fff;
+      padding: 25px 30px;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+      overflow-y: auto;
+      max-height: 600px;
+    }
+    .text-section h2 {
+      margin-top: 0;
+      color: #0a9396;
+    }
+    .model-section {
+      width: 450px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    model-viewer {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      background: #e0f2f1;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #005f73;
+      color: #fff;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Учебные материалы</h1>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">Рерайты</a>
+      <a href="#">Учебники</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section class="text-section">
+      <h2>Добро пожаловать!</h2>
+      <p>На этом сайте вы найдёте учебные материалы, рерайты и 3D-модели книг. Ниже представлена интерактивная 3D модель книги.</p>
+      <p>📚 <strong>Учебник по информатике</strong> — адаптированная версия для старших классов, с интерактивными примерами и пояснениями.</p>
+      <p>✍️ <strong>Рерайт методических материалов</strong> — актуализирован под современные образовательные стандарты. Подходит для самостоятельной подготовки.</p>
+      <p>🧠 <strong>Дополнительно</strong> — ссылки на тесты, краткие шпаргалки и схемы. Всё оформлено в виде удобного ресурса.</p>
+    </section>
+    <section class="model-section">
+      <model-viewer 
+        src="book.glb" 
+        alt="3D модель книги" 
+        auto-rotate 
+        camera-controls 
+        ar>
+      </model-viewer>
+    </section>
+  </main>
+  <footer>
+    © 2025 Учебные материалы — рерайты и книги. Свяжитесь с нами: info@example.com
+  </footer>
+</body>
+</html>
